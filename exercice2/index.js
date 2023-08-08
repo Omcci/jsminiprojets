@@ -1,25 +1,27 @@
-let sum = 1000;
-let segment = 0;
-let progressBar;
-let interval;
+class ProgressBar {
+    constructor(sum) {
+        this.sum = sum;
+        this.segment = 0;
+        this.progressFill = null;
+        this.initialization();
+        this.interval = setInterval(() => {
+            this.displayBar()
+        }, 10)
+    }
 
-let initialisation = function () {
-  progressBar = document.getElementById("progressBar");
-  progressBar.value = segment;
-  progressBar.max = sum;
-};
+    initialization() {
+        this.progressFill = document.getElementById("progressFill");
+        this.progressFill.style.width = 0;
+    }
 
-let displayBar = function () {
-  segment++;
+    displayBar() {
+        this.segment++;
 
-  if (segment >= sum) {
-    clearInterval(interval);
-  }
+        if (this.segment >= this.sum) {
+            clearInterval(this.interval);
+        }
 
-  progressBar.value = segment;
-};
-
-window.onload = function () {
-  initialisation();
-  interval = setInterval(displayBar, 10);
-};
+        const fillWidth = (this.segment / this.sum) * 100;
+        this.progressFill.style.width = `${fillWidth}%`;
+    }
+}

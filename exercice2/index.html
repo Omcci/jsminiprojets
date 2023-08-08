@@ -26,17 +26,25 @@
           overflow: hidden;
         "
       >
-        <progress
+        <div
           style="
-            width: 100%;
+            width: 0;
             height: 100%;
-            appearance: none;
-            border: 1px solid black;
+            background: linear-gradient(
+              to right,
+              green,
+              yellow,
+              orange,
+              red
+            ); /* Gradient color */
           "
-          id="progressBar"
-        ></progress>
+          id="progressFill"
+        ></div>
       </div>
     </div>
+    <script src="./index.js"></script>
+    <script>
+      const instance = new ProgressBar(1000);
+    </script>
   </body>
-  <script src="./index.js"></script>
 </html>
