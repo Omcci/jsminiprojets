@@ -1,86 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body style="display: flex; justify-content: center; align-items: center;
-flex-direction: column; height: 100vh;">
-<div style="position: relative; height: 42rem; width: 50vw;display: flex; justify-content: center; align-items: center;
-flex-direction: column;background-image: url('./paper.jpg'); background-size: contain;
-;box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-;
-">
-    <h2 style="font-family:  Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 36px;">Formulaire</h2>
-    <form id="myForm">
-        <div style="display:flex ; flex-direction: column;" ;>
-            <label style="font-family: Cambria; margin-top: 20px;" for="nom">Nom :</label>
-            <input  placeholder="Nom de famille..."
-            style="all: unset; padding: 12px; border-radius: 10px; border: 1px solid black; width: 260px;" type="text" id="nom" name="nom" required> 
-           
-            <p style="color: red; margin: 0; height: 1rem; text-align: left; width: 260px;" id="nomError"></p>
+  </head>
+  <body
+    style="
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+    "
+  >
+    <div
+      style="
+        position: relative;
+        height: 42rem;
+        width: 50vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-image: url('./paper.jpg');
+        background-size: contain;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+          rgba(0, 0, 0, 0.22) 0px 10px 10px;
+      "
+    >
+      <h2
+        style="
+          font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
+          font-size: 36px;
+        "
+      >
+        Formulaire
+      </h2>
+      <form id="myForm">
+        <div style="display: flex; flex-direction: column" ;>
+          <label style="font-family: Cambria; margin-top: 20px" for="nom"
+            >Nom :</label
+          >
+          <input
+            placeholder="Nom de famille..."
+            style="
+              all: unset;
+              padding: 12px;
+              border-radius: 10px;
+              border: 1px solid black;
+              width: 260px;
+            "
+            type="text"
+            id="nom"
+            name="nom"
+            required
+          />
+
+          <p
+            style="
+              color: red;
+              margin: 0;
+              height: 1rem;
+              text-align: left;
+              width: 260px;
+            "
+            id="nomError"
+          ></p>
         </div>
-        <div style="display:flex ; flex-direction: column;" ;>
-            <label style="font-family: Cambria; margin-top: 20px;" for="prenom">Prénom :</label>
-            <input style="all: unset; padding: 12px; border-radius: 10px; border: 1px solid black;width: 260px;" type="text" id="prenom" name="prenom" required
+        <div style="display: flex; flex-direction: column" ;>
+          <label style="font-family: Cambria; margin-top: 20px" for="prenom"
+            >Prénom :</label
+          >
+          <input
+            style="
+              all: unset;
+              padding: 12px;
+              border-radius: 10px;
+              border: 1px solid black;
+              width: 260px;
+            "
+            type="text"
+            id="prenom"
+            name="prenom"
+            required
             placeholder="Prénom..."
-            >
-            <p style="color: red; margin: 0; height: 1rem; text-align: left; width: 260px;" id="prenomError"></p>
+          />
+          <p
+            style="
+              color: red;
+              margin: 0;
+              height: 1rem;
+              text-align: left;
+              width: 260px;
+            "
+            id="prenomError"
+          ></p>
         </div>
-        <div style="display:flex ; flex-direction: column;" ;>
-            <label style="font-family: Cambria; margin-top: 20px;" for="email">Email :</label>
-            <input style="all: unset; padding: 12px; border-radius: 10px; border: 1px solid black;width: 260px;" type="email" id="email" name="email" required
+        <div style="display: flex; flex-direction: column" ;>
+          <label style="font-family: Cambria; margin-top: 20px" for="email"
+            >Email :</label
+          >
+          <input
+            style="
+              all: unset;
+              padding: 12px;
+              border-radius: 10px;
+              border: 1px solid black;
+              width: 260px;
+            "
+            type="email"
+            id="email"
+            name="email"
+            required
             placeholder="nom@mail.fr"
-            >
-            <p style="color: red; margin: 0; height: 1rem; text-align: left; width: 260px;" id="emailError"></p>
+          />
+          <p
+            style="
+              color: red;
+              margin: 0;
+              height: 1rem;
+              text-align: left;
+              width: 260px;
+            "
+            id="emailError"
+          ></p>
         </div>
-        <div style="display:flex ; flex-direction: column;" ;>
-            <label style="font-family: Cambria; margin-top: 20px;" for="password">Mot de passe :</label>
-            <input style="all: unset; padding: 12px; border-radius: 10px; border: 1px solid black;width: 260px;" type="password" id="password" name="password" required
+        <div style="display: flex; flex-direction: column" ;>
+          <label style="font-family: Cambria; margin-top: 20px" for="password"
+            >Mot de passe :</label
+          >
+          <input
+            style="
+              all: unset;
+              padding: 12px;
+              border-radius: 10px;
+              border: 1px solid black;
+              width: 260px;
+            "
+            type="password"
+            id="password"
+            name="password"
+            required
             placeholder="******"
-            >
-            <p style="color: red; margin: 0; height: 1rem; text-align: left; width: 260px;" id="passwordError"></p>
+          />
+          <p
+            style="
+              color: red;
+              margin: 0;
+              height: 1rem;
+              text-align: left;
+              width: 260px;
+            "
+            id="passwordError"
+          ></p>
         </div>
-        <div style="display: flex; justify-content: center; align-items: center;">
-            <button style="all: unset; font-family: Cambria; padding: 8px; border: 1px solid black; border-radius: 16px;margin-top: 70px; cursor: pointer;" type="button" onclick="validateForm()">Valider</button>
+        <div
+          style="display: flex; justify-content: center; align-items: center"
+        >
+          <button
+            style="
+              all: unset;
+              font-family: Cambria;
+              padding: 8px;
+              border: 1px solid black;
+              border-radius: 16px;
+              margin-top: 70px;
+              cursor: pointer;
+            "
+            type="button"
+            onclick="validateForm()"
+          >
+            Valider
+          </button>
         </div>
-    </form>
-    <div style="position: absolute;  right: -360px; transform:rotate(280deg) translateX(-50%);">
-        <img src="./pen.png" alt="Pen Image" width="500" height="500" >
-    </div>    <script>
+      </form>
+      <div
+        style="
+          position: absolute;
+          right: -500px;
+          transform: translateX(-50%);
+        "
+      >
+        <img src="./main.png" alt="Pen Image" width="500" height="500" />
+      </div>
+      <script>
         function validateForm() {
-            const nom = document.getElementById('nom').value;
-            const prenom = document.getElementById('prenom').value;
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
+          const nom = document.getElementById("nom").value;
+          const prenom = document.getElementById("prenom").value;
+          const email = document.getElementById("email").value;
+          const password = document.getElementById("password").value;
 
-            const nomRegex = /^[a-zA-Z]+$/;
-            const prenomRegex = /^[a-zA-Z]+$/;
-            const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-            const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+          const nomRegex = /^[a-zA-Z]+$/;
+          const prenomRegex = /^[a-zA-Z]+$/;
+          const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+          const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
 
-            const nomError = document.getElementById('nomError');
-            const prenomError = document.getElementById('prenomError');
-            const emailError = document.getElementById('emailError');
-            const passwordError = document.getElementById('passwordError');
+          const nomError = document.getElementById("nomError");
+          const prenomError = document.getElementById("prenomError");
+          const emailError = document.getElementById("emailError");
+          const passwordError = document.getElementById("passwordError");
 
-            nomError.textContent = nomRegex.test(nom) ? '' : 'Le nom est invalide.';
-            prenomError.textContent = prenomRegex.test(prenom) ? '' : 'Le prénom est invalide.';
-            emailError.textContent = emailRegex.test(email) ? '' : 'L\'email est invalide.';
-            passwordError.textContent = passwordRegex.test(password) ? '' : 'Le mot de passe doit contenir au moins 8 caractères, dont au moins une minuscule, une majuscule et un chiffre.';
+          nomError.textContent = nomRegex.test(nom)
+            ? ""
+            : "Le nom est invalide.";
+          prenomError.textContent = prenomRegex.test(prenom)
+            ? ""
+            : "Le prénom est invalide.";
+          emailError.textContent = emailRegex.test(email)
+            ? ""
+            : "L'email est invalide.";
+          passwordError.textContent = passwordRegex.test(password)
+            ? ""
+            : "Le mot de passe doit contenir au moins 8 caractères, dont au moins une minuscule, une majuscule et un chiffre.";
 
-            nomError.style.visibility = nomError.textContent === '' ? 'hidden' : 'visible';
-            prenomError.style.visibility = prenomError.textContent === '' ? 'hidden' : 'visible';
-            emailError.style.visibility = emailError.textContent === '' ? 'hidden' : 'visible';
-            passwordError.style.visibility = passwordError.textContent === '' ? 'hidden' : 'visible';
+          nomError.style.visibility =
+            nomError.textContent === "" ? "hidden" : "visible";
+          prenomError.style.visibility =
+            prenomError.textContent === "" ? "hidden" : "visible";
+          emailError.style.visibility =
+            emailError.textContent === "" ? "hidden" : "visible";
+          passwordError.style.visibility =
+            passwordError.textContent === "" ? "hidden" : "visible";
 
-            if (nomRegex.test(nom) && prenomRegex.test(prenom) && emailRegex.test(email) && passwordRegex.test(password)) {
-                alert('Formulaire validé !');
-            }
+          if (
+            nomRegex.test(nom) &&
+            prenomRegex.test(prenom) &&
+            emailRegex.test(email) &&
+            passwordRegex.test(password)
+          ) {
+            alert("Formulaire validé !");
+          }
         }
-    </script>
+      </script>
     </div>
-</body>
+  </body>
 </html>
