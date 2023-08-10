@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .console {
+        font-family: "Fira Mono";
+        width: 700px;
+        height: 450px;
+        box-sizing: border-box;
+        margin: auto;
+        position: absolute;
+        z-index: 9;
+      }
+
+      .console header {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        background-color: #3c3c3c;
+        height: 45px;
+        line-height: 45px;
+        text-align: center;
+        color: #ddd;
+        cursor: move;
+        z-index: 10;
+      }
+
+      .console .consolebody {
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        box-sizing: border-box;
+        padding: 20px;
+        height: calc(100% - 40px);
+        overflow: scroll;
+        background-color: #000;
+        color: #63de00;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+          rgba(0, 0, 0, 0.22) 0px 10px 10px;
+      }
+
+      .console .consolebody::-webkit-scrollbar {
+        display: none;
+      }
+
+      .console .consolebody p {
+        line-height: 1.5rem;
+      }
+
+      .console .consolebody input {
+        all: unset;
+        color: #63de00;
+        width: 80%;
+      }
+    </style>
+  </head>
+  <body
+    style="
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-image: url(bg.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+    "
+  >
+    <div class="console" id="console">
+      <header class="header" id="consoleHeader">
+        <p>guest@tgw</p>
+      </header>
+      <div class="consolebody">
+        <p>> type help to see a list of commands</p>
+        <p>> <input id="commandInput" type="text" autofocus /></p>
+      </div>
+    </div>
+
+    <script src="./index.js"> 
+    </script>
+  </body>
+</html>
