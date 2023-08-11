@@ -1,0 +1,55 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bataille Navale</title>
+        <style>
+            /* Ajout de quelques styles pour la navbar */
+            #navbar {
+                position: fixed;
+                bottom: 0;
+                width: 70vw;
+                background-color: #333;
+                padding: 10px;
+                color: white;
+                text-align: center;
+                align-self: center;
+            }
+
+            #container {
+                height: 100%; 
+                width: 70vw; 
+                border: 1px solid;
+            }
+        </style>
+    </head>
+    
+    <body>
+    
+        <div style="height: 85vh; display: flex; justify-content: center; align-items: center;">
+            <table id="container"></table>
+        </div>
+    
+        <div id="navbar">
+            <span id="game-info">Cliquez sur une case pour commencer!</span>
+            <button onclick="restartGame()">Redémarrer</button>
+        </div>
+    
+        <script src="./index.js"></script>
+        <!-- <script>
+            // Fonction pour redémarrer le jeu
+            function restartGame() {
+                location.reload();
+            }
+        
+            document.addEventListener("DOMContentLoaded", function() {
+                const instance = new GridGenerator();
+                instance.run(12, 12);
+                const jeu = new BatailleNavale();
+            });
+        </script> -->
+    </body>
+    </html>
+    
