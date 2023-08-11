@@ -135,8 +135,12 @@ class MyMorpionXO {
       }, 10);
   }
 
-  run(xAxis, yAxis) {
+  middleware(xAxis, yAxis) {
     this.createGrid(xAxis, yAxis);
+  }
+
+  run(xAxis, yAxis) {
+   this.middleware(xAxis, yAxis)
   }
 }
 
